@@ -20,8 +20,10 @@ resource "docker_container" "nginx" {
 
   ports {
     internal = 80
-    
-    # view it on port 8000 in your browser
     external = 8000
   }
+}
+
+output "nginx_confirmation" {
+  value = "Please verify that the Nginx container is running on port 8000"
 }
